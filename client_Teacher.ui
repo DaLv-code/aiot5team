@@ -84,7 +84,7 @@ color:#74E3C3;
      </size>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="mainpg">
      <widget class="QPushButton" name="checkStatistic_Btn">
@@ -195,11 +195,35 @@ color:#74E3C3;
        <bool>false</bool>
       </property>
      </widget>
+     <widget class="QTextBrowser" name="id_teacher">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>120</y>
+        <width>331</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+     </widget>
      <widget class="QLabel" name="welcome">
       <property name="geometry">
        <rect>
-        <x>566</x>
-        <y>188</y>
+        <x>760</x>
+        <y>120</y>
         <width>241</width>
         <height>51</height>
        </rect>
@@ -207,15 +231,13 @@ color:#74E3C3;
       <property name="font">
        <font>
         <pointsize>16</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
        </font>
       </property>
       <property name="text">
        <string>선생님, 환영합니다!</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
       </property>
      </widget>
     </widget>
@@ -259,7 +281,7 @@ color:#74E3C3;
          <height>1500</height>
         </size>
        </property>
-       <widget class="QTableView" name="exam_result">
+       <widget class="QTableView" name="student_ans">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -352,10 +374,10 @@ color:#74E3C3;
      <widget class="QTextBrowser" name="question">
       <property name="geometry">
        <rect>
-        <x>530</x>
+        <x>540</x>
         <y>100</y>
-        <width>721</width>
-        <height>191</height>
+        <width>711</width>
+        <height>401</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -368,9 +390,9 @@ color:#74E3C3;
      <widget class="QWidget" name="verticalLayoutWidget_2">
       <property name="geometry">
        <rect>
-        <x>530</x>
-        <y>310</y>
-        <width>721</width>
+        <x>540</x>
+        <y>520</y>
+        <width>711</width>
         <height>91</height>
        </rect>
       </property>
@@ -417,7 +439,7 @@ color:#74E3C3;
       <property name="geometry">
        <rect>
         <x>1120</x>
-        <y>640</y>
+        <y>650</y>
         <width>131</width>
         <height>71</height>
        </rect>
@@ -580,61 +602,6 @@ color:#74E3C3;
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QTextEdit" name="input_exam">
-      <property name="geometry">
-       <rect>
-        <x>530</x>
-        <y>480</y>
-        <width>721</width>
-        <height>131</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Panel</enum>
-      </property>
-      <property name="lineWidth">
-       <number>4</number>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label">
-      <property name="geometry">
-       <rect>
-        <x>530</x>
-        <y>410</y>
-        <width>421</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>13</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>문제,보기1,보기2,보기3,보기4,보기5,정답</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_2">
-      <property name="geometry">
-       <rect>
-        <x>530</x>
-        <y>440</y>
-        <width>591</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>13</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>아래 입력란에 위와 같은 양식으로 입력하신 후 [문제 추가하기] 를 눌러 주십시오.</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="pg2_QnA">
      <widget class="QPushButton" name="to_statisticBtn">
@@ -678,7 +645,7 @@ color:#74E3C3;
       <property name="geometry">
        <rect>
         <x>1120</x>
-        <y>640</y>
+        <y>650</y>
         <width>131</width>
         <height>71</height>
        </rect>
@@ -716,44 +683,12 @@ color:#74E3C3;
        <rect>
         <x>0</x>
         <y>20</y>
-        <width>721</width>
-        <height>481</height>
+        <width>1251</width>
+        <height>431</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true"/>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Panel</enum>
-      </property>
-      <property name="lineWidth">
-       <number>4</number>
-      </property>
-     </widget>
-     <widget class="QTextBrowser" name="Question">
-      <property name="geometry">
-       <rect>
-        <x>730</x>
-        <y>150</y>
-        <width>521</width>
-        <height>351</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Panel</enum>
-      </property>
-      <property name="lineWidth">
-       <number>4</number>
-      </property>
-     </widget>
-     <widget class="QTextBrowser" name="QstuName">
-      <property name="geometry">
-       <rect>
-        <x>730</x>
-        <y>90</y>
-        <width>521</width>
-        <height>51</height>
-       </rect>
       </property>
       <property name="frameShape">
        <enum>QFrame::Panel</enum>
@@ -781,11 +716,11 @@ color:#74E3C3;
        <number>4</number>
       </property>
      </widget>
-     <widget class="QPushButton" name="QnA_loadBtn">
+     <widget class="QPushButton" name="QnA_registerBtm">
       <property name="geometry">
        <rect>
-        <x>730</x>
-        <y>20</y>
+        <x>420</x>
+        <y>470</y>
         <width>521</width>
         <height>61</height>
        </rect>
@@ -797,43 +732,6 @@ color:#74E3C3;
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{
-border-radius:1px;
-background-color:#74E3C3;
-color:#fff;
-}
-
-QPushButton:hover{
-background-color:#fff;
-color:#74E3C3;
-}
-</string>
-      </property>
-      <property name="text">
-       <string>QnA 목록 불러오기</string>
-      </property>
-      <property name="autoDefault">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="QnA_registerBtm">
-      <property name="geometry">
-       <rect>
-        <x>1120</x>
-        <y>530</y>
-        <width>131</width>
-        <height>71</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>나눔스퀘어라운드</family>
-        <pointsize>13</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
        </font>
       </property>
       <property name="styleSheet">
@@ -850,19 +748,40 @@ color:#74E3C3;
 </string>
       </property>
       <property name="text">
-       <string>답변 등록하기</string>
+       <string>QnA 답변 등록하기</string>
       </property>
       <property name="autoDefault">
        <bool>false</bool>
       </property>
      </widget>
+     <widget class="QTextBrowser" name="QteaName">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>550</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+     </widget>
      <widget class="QLabel" name="TeacherNamelb">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>540</y>
-        <width>161</width>
-        <height>41</height>
+        <x>140</x>
+        <y>590</y>
+        <width>111</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -871,25 +790,10 @@ color:#74E3C3;
        </font>
       </property>
       <property name="text">
-       <string>▽선생님 이름 입력</string>
+       <string>선생님</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="input_teaName">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>580</y>
-        <width>131</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLineEdit{
-border: 0px;
-}</string>
       </property>
      </widget>
     </widget>
@@ -933,9 +837,9 @@ color:#74E3C3;
      <widget class="QTextBrowser" name="chat_space">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>110</x>
         <y>30</y>
-        <width>1181</width>
+        <width>1141</width>
         <height>441</height>
        </rect>
       </property>
@@ -952,9 +856,9 @@ color:#74E3C3;
      <widget class="QTextEdit" name="msg_input">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>110</x>
         <y>490</y>
-        <width>971</width>
+        <width>931</width>
         <height>101</height>
        </rect>
       </property>
@@ -975,7 +879,7 @@ color:#74E3C3;
       <property name="geometry">
        <rect>
         <x>1120</x>
-        <y>640</y>
+        <y>650</y>
         <width>131</width>
         <height>71</height>
        </rect>

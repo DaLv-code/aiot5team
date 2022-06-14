@@ -16,8 +16,6 @@ class Teach_Win(QMainWindow):
         self.setFixedSize(1400, 800)
         self.stackedWidget.setCurrentIndex(0)
 
-        self.QnA_list = []
-
         self.checkStatistic_Btn.clicked.connect(self.move_page1)
         self.checkQnA_Btn.clicked.connect(self.move_page2)
         self.RTchatBtn.clicked.connect(self.move_page3)
@@ -28,7 +26,7 @@ class Teach_Win(QMainWindow):
         self.to_mainBtn2.clicked.connect(self.move_main)
         self.to_statisticBtn.clicked.connect(self.move_page1)
         self.msg_sendBtn.clicked.connect(self.send_msg)
-        self.QnA_loadBtn.clicked.connect(self.request_QnAs)
+        self.QnA_registerBtm.clicked.connect(self.send_QnA_ans)
         self.exit_Btn.clicked.connect(lambda: self.close())
 
     def move_main(self):  # 교사 클라이언트 메인 페이지(인덱스 0)
@@ -41,17 +39,18 @@ class Teach_Win(QMainWindow):
         self.QnATable.clear()
         self.QnATable.setColumnCount(5)
         self.QnATable.setHorizontalHeaderLabels(["학생명", "완료", "교사명", "질문 내용", "답변 내용"])
-        self.QnATable.setColumnWidth(0, 40)
-        self.QnATable.setColumnWidth(1, 10)
-        self.QnATable.setColumnWidth(2, 40)
-        self.QnATable.setColumnWidth(3, 300)
-        self.QnATable.setColumnWidth(4, 300)
+        self.QnATable.setColumnWidth(0, 50)
+        self.QnATable.setColumnWidth(1, 5)
+        self.QnATable.setColumnWidth(2, 50)
+        self.QnATable.setColumnWidth(3, 600)
+        self.QnATable.setColumnWidth(4, 600)
         self.QnATable.setRowCount(30)
 
         self.recv_Thread = Listen(self)
         self.recv_Thread.listen.connect(self.rcv_)
         self.recv_Thread.start()
         self.stackedWidget.setCurrentIndex(2)
+        self.request_QnAs()
 
     def move_page3(self):  # 교사 클라이언트 채팅상담 페이지(인덱스 3)
         self.recv_Thread = Listen(self)
@@ -69,6 +68,17 @@ class Teach_Win(QMainWindow):
     def request_QnAs(self):
         self.recv_Thread.teach_sock.send("qna/X".encode())
         print("QnA 목록 요청")
+
+    # def get_Question(self):
+    #     currentRow = self.QnATable.currentRow()
+    #     currentCol = self.QnATable.currentColumn()
+    #     if currentRow > -1:
+    #         question = (self.QnATable.item(currentRow, currentCol).text(),)
+    #     self.Question.setText(question)
+
+    def send_QnA_ans(self):
+        self.recv_Thread.teach_sock.send("qna/".encode())
+        print(f"QnA 답변{self.input_Answer.toPlainText()}")
 
     @pyqtSlot(str)
     def rcv_(self, rcv_):

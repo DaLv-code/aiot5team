@@ -108,8 +108,6 @@ class handleClnt(threading.Thread):
                 if chatUser != self.clntSock: # 자기 자신을 제외한 모두에게 전송
                     chatUser.sendall(chatMsg.encode()) 
 
-        
-
 
 if __name__ == '__main__':
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
