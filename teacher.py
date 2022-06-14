@@ -16,8 +16,6 @@ class Teach_Win(QMainWindow):
         self.setFixedSize(1400, 800)
         self.stackedWidget.setCurrentIndex(0)
 
-        self.QnA_list = []
-
         self.checkStatistic_Btn.clicked.connect(self.move_page1)
         self.checkQnA_Btn.clicked.connect(self.move_page2)
         self.RTchatBtn.clicked.connect(self.move_page3)
