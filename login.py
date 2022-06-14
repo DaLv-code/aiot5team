@@ -1,18 +1,9 @@
 import socket
-import threading
-import sqlite3
 import sys
-import time
 from PyQt5.QtWidgets import *
-from PyQt5 import QtCore
 from PyQt5 import uic
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import QCoreApplication
 import student
 import teacher
-import pymysql
-import random
-from PyQt5.QtCore import *
 
 IP="127.0.0.1"
 PORT=5150
@@ -95,6 +86,7 @@ class Login(QDialog):  # 로그인창 시작
             sock.close()
         elif logOK[0]=='NO':
             QMessageBox().information(self,"로그인 실패","아이디 혹은 비밀번호를 확인하세요.")
+
 
 if __name__ == '__main__':
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
