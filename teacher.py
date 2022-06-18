@@ -9,7 +9,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
 IP = "127.0.0.1"
-PORT = 5142
+PORT = 5151
 
 def goWindow(self, UIname):
     if UIname == 'Join':
@@ -22,7 +22,7 @@ def goWindow(self, UIname):
 class Teach_Win(QMainWindow):
     def __init__(self):
         super(Teach_Win, self).__init__()
-        uic.loadUi("./client_Teacher.ui", self)
+        uic.loadUi("client_Teacher.ui", self)
         self.setWindowTitle("선생님용 학생 관리 프로그램")
         self.setFixedSize(1400, 800)  # 클라이언트 메인 창 형태 설정
         self.recv_Thread = Listen(self)
@@ -114,17 +114,23 @@ class Teach_Win(QMainWindow):
         y = [self.scoreDict[20], self.scoreDict[40], self.scoreDict[60], self.scoreDict[80], self.scoreDict[100]]
         fig = plt.figure()
         canvas = FigureCanvasQTAgg(fig)
+        sleep(0.05)
         self.scoreGraph.addWidget(canvas, 0, 0)
         ax = plt.subplot()
         ax.yaxis.set_major_locator(MaxNLocator(integer=True))
         ax.bar(x, y, color=('red', 'darkorange', 'yellow', 'green', 'aquamarine'))
         plt.title("<Student total exam score graph>")
+        plt.close(fig)
 
     def request_Statistics(self):  # 서버에게 학생 시험 결과 통계 요청
-        sock.send("point/".encode())
-        print("학생 문제풀이 통계 요청")
+        self.exam_result.clear()
+        self.wrong_examNum.clear()
+        self.wrongNumList.clear()
         for i in [20, 40, 60, 80, 100]:
             self.scoreDict[i] = 0  # 점수 그래프용 수치 초기화
+        sleep(0.05)
+        sock.send("point/".encode())
+        print("학생 문제풀이 통계 요청")
 
     def send_NewQuiz(self):  # 서버에게 새로 출제할 문제 전송
         new_quiz = "/".join([self.input_NewQuiz.toPlainText(), "① " + self.input_NewQuiz_1.toPlainText(),
@@ -139,11 +145,13 @@ class Teach_Win(QMainWindow):
         if (len(self.input_NewQuiz.toPlainText()) != 0 and len(self.input_NewQuiz_1.toPlainText()) != 0) \
                 and (len(self.input_NewQuiz_2.toPlainText()) != 0 and len(self.input_NewQuiz_3.toPlainText()) != 0) \
                 and (len(self.input_NewQuiz_4.toPlainText()) != 0 and len(self.input_NewQuiz_A.toPlainText()) != 0):
+            sleep(0.2)
             sock.send(f'update/{new_quiz}'.encode())
             QMessageBox().information(self, "전송 완료", "입력하신 문제를 전송했습니다.")
             print("새 문항 전송됨: ", new_quiz)
             self.newQuiz_inputs_clear()
         else:
+            sleep(0.1)
             QMessageBox().warning(self, "", "문제 내용, 보기 1, 2, 3, 4번과 정답은 반드시 입력하셔야 합니다.")
 
     def newQuiz_inputs_clear(self):  # 새로 출제한 문항을 전송한 다음 입력란 비움
@@ -175,6 +183,7 @@ class Teach_Win(QMainWindow):
 
         elif rcv_data.endswith("/score/"):  # 시험 결과 점수 목록 데이터를 수신한 다음 테이블위젯 셀별로 입력
             self.wrongNumList.clear()
+            self.wrong_examNum.clear()
             score_list = rcv_data.split("/score/")
             score_list.remove(score_list[-1])
             for score in score_list:
@@ -183,6 +192,7 @@ class Teach_Win(QMainWindow):
                 for e in score.split("/"):
                     self.exam_result.setItem(_row, _col, QTableWidgetItem(e))
                     _col += 1
+                sleep(0.05)
                 if int(score.split("/")[1]) in range(0, 21):  # 점수 구간별 결과치 합산 딕셔너리
                     self.scoreDict[20] += 1
 
@@ -195,7 +205,7 @@ class Teach_Win(QMainWindow):
                 elif int(score.split("/")[1]) in range(60, 81):
                     self.scoreDict[80] += 1
 
-                elif int(score.split("/")[1]) in range (80, 101):
+                elif int(score.split("/")[1]) in range(80, 101):
                     self.scoreDict[100] += 1
                 else:
                     pass
@@ -212,7 +222,7 @@ class Teach_Win(QMainWindow):
                     self.wrong_examNum.append(str(f"{_num}번 문제: {self.wrongNumList.count(_num)}회"))
 
         else:  # 문제풀이 통계, QnA 목록 수신 제외 - 상담 채팅을 수신하는 경우
-            sleep(0.2)
+            sleep(0.1)
             self.chat_space.append(f"학생: {rcv_data}")
 
 class Listen(QThread):  # 서버로부터 데이터를 수신할 스레드 클래스
