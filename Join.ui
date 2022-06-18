@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>468</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLineEdit" name="idText">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>40</y>
+     <width>261</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border:1px solid #000;
+border-top-left-radius :10px;
+border-top-right-radius : 10px;
+border-bottom-left-radius : 0px;
+border-bottom-right-radius : 0px;
+font-weight:500;
+}
+QLineEdit:focus{
+border:1.5px solid #000;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>ID</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="pwText">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>140</y>
+     <width>261</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border:1px solid #000; font-weight:500; border-radius:10px;
+}
+QLineEdit:focus{
+border:1.5px solid #000;
+}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>PW</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="repwText">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>200</y>
+     <width>261</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border:1px solid #000; font-weight:500; border-radius:10px;
+}
+QLineEdit:focus{
+border:1.5px solid #000;
+}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>PW 재입력</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="nameText">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>260</y>
+     <width>261</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border:1px solid #000; font-weight:500; border-radius:10px;
+}
+QLineEdit:focus{
+border:1.5px solid #000;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>NAME</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="joinBtn">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>380</y>
+     <width>261</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>62</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+border:none;
+border-radius:10px;
+background-color:#f5503e;
+color:#fff;
+font-weight:500;
+}
+QPushButton:hover{
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string>회원가입</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="idBtn">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>80</y>
+     <width>261</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>62</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+border-top-left-radius :0px;
+border-top-right-radius : 0px; 
+border-bottom-left-radius : 10px; 
+border-bottom-right-radius : 10px;
+background-color:#000;
+color:#fff;
+font-weight:500;
+}
+QPushButton:hover{
+text-decoration: underline;
+}</string>
+   </property>
+   <property name="text">
+    <string>ID 중복확인</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="teaBtn">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>320</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="tabletTracking">
+    <bool>false</bool>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+border: 1px solid #000;
+border-top-left-radius :10px;
+border-top-right-radius : 0px; 
+border-bottom-left-radius : 10px; 
+border-bottom-right-radius : 0px;
+font-weight:500;
+color:#777;
+background-color:#fff;
+padding-left:25px;
+}
+QRadioButton:checked{
+background-color:#000;
+color:#fff;
+}</string>
+   </property>
+   <property name="text">
+    <string>Teacher</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="stuBtn">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>320</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+border: 1px solid #000;
+border-top-left-radius :0px;
+border-top-right-radius : 10px; 
+border-bottom-left-radius : 0px; 
+border-bottom-right-radius : 10px;
+font-weight:500;
+color:#777;
+background-color:#fff;
+padding-left:23px;
+}
+QRadioButton:checked{
+background-color:#000;
+color:#fff;
+}</string>
+   </property>
+   <property name="text">
+    <string>Student</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

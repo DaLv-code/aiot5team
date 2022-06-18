@@ -1,0 +1,1305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1398</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+background-color: qradialgradient(spread:pad, cx:0.806, cy:0.205, radius:0.5, fx:0.937, fy:0.079, stop:0 rgba(255, 255, 255, 255), stop:0.546875 rgba(210, 255, 232, 255))
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="exit_Btn">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>40</y>
+      <width>70</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>나눔스퀘어</family>
+      <pointsize>35</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color:#fff;
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>1251</width>
+      <height>761</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1120</width>
+      <height>650</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1920</width>
+      <height>1070</height>
+     </size>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="mainpg">
+     <widget class="QPushButton" name="checkStatistic_Btn">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>250</y>
+        <width>1031</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>27</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color:#fff;
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}</string>
+      </property>
+      <property name="text">
+       <string>문제풀이 통계 페이지</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RTchatBtn">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>480</y>
+        <width>201</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color:#fff;
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}</string>
+      </property>
+      <property name="text">
+       <string>학생 상담채팅</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="checkQnA_Btn">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>480</y>
+        <width>191</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color:#fff;
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}</string>
+      </property>
+      <property name="text">
+       <string>QnA 페이지</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="welcome">
+      <property name="geometry">
+       <rect>
+        <x>556</x>
+        <y>178</y>
+        <width>261</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	color: rgb(25, 86, 77);
+}</string>
+      </property>
+      <property name="text">
+       <string>선생님, 환영합니다!</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pg1_stastics">
+     <widget class="QTextBrowser" name="wrong_examNum">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>130</y>
+        <width>271</width>
+        <height>481</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+       </font>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+      <property name="openLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="to_mainBtn">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>650</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color: rgb(25, 86, 77);
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>◀메인으로</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="to_QnABtn">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>650</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color: rgb(25, 86, 77);
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>QnA 확인</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="update_examBtn">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>650</y>
+        <width>161</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color: rgb(25, 86, 77);
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>신규 문제 보내기</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="input_NewQuiz">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>240</y>
+        <width>431</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>IBeamCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>문제</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>580</y>
+        <width>441</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	color: rgb(25, 86, 77);
+}</string>
+      </property>
+      <property name="text">
+       <string>위 입력란에 입력하신 후 [신규 문제 보내기] 를 눌러 주십시오.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="load_examBtn">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>40</y>
+        <width>271</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>24</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>통계 불러오기</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="exam_result">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>40</y>
+        <width>431</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+      <column>
+       <property name="text">
+        <string>학생명</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>점수</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>오답 문항</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QTextEdit" name="input_NewQuiz_1">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>290</y>
+        <width>431</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>IBeamCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>보기 1</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="input_NewQuiz_2">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>340</y>
+        <width>431</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>IBeamCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>보기2</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="input_NewQuiz_3">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>390</y>
+        <width>431</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>IBeamCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>보기3</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="input_NewQuiz_4">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>440</y>
+        <width>431</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>IBeamCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>보기4</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="input_NewQuiz_A">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>540</y>
+        <width>431</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>IBeamCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>정답</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="input_NewQuiz_5">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>490</y>
+        <width>431</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>IBeamCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>보기5</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>0</y>
+        <width>431</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="scoreGraph"/>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pg2_QnA">
+     <widget class="QPushButton" name="to_statisticBtn">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>650</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어_ac</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color: rgb(25, 86, 77);
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>통계 확인</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="to_RTchatBtn">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>650</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color: rgb(25, 86, 77);
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>학생 상담채팅</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="input_Answer">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>500</y>
+        <width>811</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="StuNameLB">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>490</y>
+        <width>221</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	color: rgb(25, 86, 77);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <property name="text">
+       <string>질문을 남긴 학생 이름 입력</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_Qstu">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>540</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+border: 3px solid gray;
+border-bottom-color: rgb(255, 255, 255);
+	border-right-color: rgb(255, 255, 255);
+}</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="QnATable">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>30</y>
+        <width>1251</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+      <column>
+       <property name="text">
+        <string>학생명</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>나눔스퀘어</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>답변완료</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>나눔스퀘어</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>교사명</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>나눔스퀘어</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>질문</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>나눔스퀘어</family>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>답변</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>나눔스퀘어</family>
+        </font>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="QnA_registerBtm">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>690</y>
+        <width>231</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>17</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color: rgb(25, 86, 77);
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>QnA 답변 등록하기</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="AnswerLB">
+      <property name="geometry">
+       <rect>
+        <x>551</x>
+        <y>450</y>
+        <width>241</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	color: rgb(25, 86, 77);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <property name="text">
+       <string>답변 입력란</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="load_QnABtn">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>690</y>
+        <width>261</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>17</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>QnA 불러오기</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pg3_RTchat">
+     <widget class="QPushButton" name="msg_sendBtn">
+      <property name="geometry">
+       <rect>
+        <x>1040</x>
+        <y>490</y>
+        <width>211</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>17</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:0px;
+background-color:#74E3C3;
+color:#fff;
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}</string>
+      </property>
+      <property name="text">
+       <string>전송하기</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="chat_space">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>60</y>
+        <width>1171</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="msg_input">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>490</y>
+        <width>961</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="to_mainBtn2">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>650</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color: rgb(25, 86, 77);
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>메인으로▶</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="to_QnABtn2">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>650</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-radius:10px;
+background-color:#74E3C3;
+color: rgb(25, 86, 77);
+}
+
+QPushButton:hover{
+background-color:#fff;
+color:#74E3C3;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>QnA 확인</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>10</y>
+        <width>441</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>나눔스퀘어</family>
+        <pointsize>17</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	color: rgb(25, 86, 77);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <property name="text">
+       <string>학생 상담채팅방</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>input_NewQuiz</tabstop>
+  <tabstop>input_NewQuiz_1</tabstop>
+  <tabstop>input_NewQuiz_2</tabstop>
+  <tabstop>input_NewQuiz_3</tabstop>
+  <tabstop>input_NewQuiz_4</tabstop>
+  <tabstop>input_NewQuiz_5</tabstop>
+  <tabstop>input_NewQuiz_A</tabstop>
+  <tabstop>update_examBtn</tabstop>
+  <tabstop>to_mainBtn</tabstop>
+  <tabstop>exit_Btn</tabstop>
+  <tabstop>load_examBtn</tabstop>
+  <tabstop>exam_result</tabstop>
+  <tabstop>checkStatistic_Btn</tabstop>
+  <tabstop>RTchatBtn</tabstop>
+  <tabstop>checkQnA_Btn</tabstop>
+  <tabstop>wrong_examNum</tabstop>
+  <tabstop>to_statisticBtn</tabstop>
+  <tabstop>to_RTchatBtn</tabstop>
+  <tabstop>input_Answer</tabstop>
+  <tabstop>input_Qstu</tabstop>
+  <tabstop>QnATable</tabstop>
+  <tabstop>QnA_registerBtm</tabstop>
+  <tabstop>load_QnABtn</tabstop>
+  <tabstop>msg_sendBtn</tabstop>
+  <tabstop>chat_space</tabstop>
+  <tabstop>msg_input</tabstop>
+  <tabstop>to_mainBtn2</tabstop>
+  <tabstop>to_QnABtn2</tabstop>
+  <tabstop>to_QnABtn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

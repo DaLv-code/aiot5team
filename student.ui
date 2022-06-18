@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1207</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stack">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>780</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="main_page">
+     <widget class="QPushButton" name="qna_Btn">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>370</y>
+        <width>150</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>QnA</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="test_Btn">
+      <property name="geometry">
+       <rect>
+        <x>695</x>
+        <y>275</y>
+        <width>150</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>문제 풀기</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>550</y>
+        <width>150</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>점수 및 등급</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="learning_Btn">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>185</y>
+        <width>150</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>학습하기</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="chatpage_Btn">
+      <property name="geometry">
+       <rect>
+        <x>695</x>
+        <y>460</y>
+        <width>150</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>상담</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>0</y>
+        <width>1200</width>
+        <height>780</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>main.png</pixmap>
+      </property>
+     </widget>
+     <zorder>label_11</zorder>
+     <zorder>qna_Btn</zorder>
+     <zorder>test_Btn</zorder>
+     <zorder>pushButton_6</zorder>
+     <zorder>learning_Btn</zorder>
+     <zorder>chatpage_Btn</zorder>
+    </widget>
+    <widget class="QWidget" name="learning_page">
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>1171</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTextBrowser" name="info_textBrowser">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="back_Btn1">
+      <property name="geometry">
+       <rect>
+        <x>1040</x>
+        <y>700</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>처음으로</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="search_lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>493</y>
+        <width>1171</width>
+        <height>38</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(80, 188, 223, 0.5)rgb(255, 255, 255)</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="answer_textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>545</y>
+        <width>1171</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>-30</y>
+        <width>1200</width>
+        <height>780</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>study.png</pixmap>
+      </property>
+     </widget>
+     <zorder>label_13</zorder>
+     <zorder>verticalLayoutWidget</zorder>
+     <zorder>search_lineEdit</zorder>
+     <zorder>answer_textBrowser</zorder>
+     <zorder>back_Btn1</zorder>
+    </widget>
+    <widget class="QWidget" name="test_page">
+     <widget class="QPushButton" name="back_Btn2">
+      <property name="geometry">
+       <rect>
+        <x>1010</x>
+        <y>690</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>처음으로</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_4">
+      <property name="geometry">
+       <rect>
+        <x>33</x>
+        <y>770</y>
+        <width>1131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="lineWidth">
+       <number>5</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>961</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="testLayout1">
+       <item>
+        <widget class="QLabel" name="testLabel1">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>961</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="testLayout2">
+       <item>
+        <widget class="QLabel" name="testLabel2">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>440</y>
+        <width>961</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="testLayout3">
+       <item>
+        <widget class="QLabel" name="testLabel3">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>610</y>
+        <width>961</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="testLayout4">
+       <item>
+        <widget class="QLabel" name="testLabel4">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="next_Btn">
+      <property name="geometry">
+       <rect>
+        <x>1010</x>
+        <y>610</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>제출 후 다음으로</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>1030</x>
+        <y>330</y>
+        <width>161</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="count_label">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_9">
+      <property name="geometry">
+       <rect>
+        <x>1030</x>
+        <y>110</y>
+        <width>161</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QLabel" name="time_label">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="result_Btn">
+      <property name="geometry">
+       <rect>
+        <x>1010</x>
+        <y>530</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>결과 확인하기</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>0</y>
+        <width>1200</width>
+        <height>780</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>test.png</pixmap>
+      </property>
+     </widget>
+     <zorder>label_12</zorder>
+     <zorder>line_4</zorder>
+     <zorder>verticalLayoutWidget_4</zorder>
+     <zorder>verticalLayoutWidget_5</zorder>
+     <zorder>verticalLayoutWidget_6</zorder>
+     <zorder>verticalLayoutWidget_7</zorder>
+     <zorder>verticalLayoutWidget_8</zorder>
+     <zorder>verticalLayoutWidget_9</zorder>
+     <zorder>result_Btn</zorder>
+     <zorder>next_Btn</zorder>
+     <zorder>back_Btn2</zorder>
+    </widget>
+    <widget class="QWidget" name="result_page">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>1010</x>
+        <y>700</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>돌아가기</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>5</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:600;&quot;&gt;결과 확인&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>590</y>
+        <width>701</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:72pt;&quot;&gt;내 점수 →&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:72pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>1171</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QTextBrowser" name="result_textBrowser"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>0</y>
+        <width>1200</width>
+        <height>780</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>result.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>590</y>
+        <width>411</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;수고하셨습니다!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>90</y>
+        <width>1169</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:600;&quot;&gt;채점 결과&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <zorder>label_14</zorder>
+     <zorder>label_2</zorder>
+     <zorder>horizontalLayoutWidget</zorder>
+     <zorder>pushButton_2</zorder>
+     <zorder>verticalLayoutWidget_10</zorder>
+     <zorder>label_3</zorder>
+     <zorder>label_6</zorder>
+    </widget>
+    <widget class="QWidget" name="chat_Page">
+     <widget class="QLineEdit" name="chat_lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>610</y>
+        <width>1171</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>1010</x>
+        <y>700</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>돌아가기</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_11">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>1171</width>
+        <height>461</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QTextBrowser" name="chat_textBrowser"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>0</y>
+        <width>1200</width>
+        <height>780</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>chat.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>85</y>
+        <width>1169</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:600;&quot;&gt;대화&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <zorder>label_15</zorder>
+     <zorder>chat_lineEdit</zorder>
+     <zorder>pushButton_5</zorder>
+     <zorder>verticalLayoutWidget_11</zorder>
+     <zorder>label_7</zorder>
+    </widget>
+    <widget class="QWidget" name="qna_Page">
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>7</x>
+        <y>87</y>
+        <width>1171</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="dragEnabled">
+       <bool>true</bool>
+      </property>
+      <property name="dragDropOverwriteMode">
+       <bool>false</bool>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="rowCount">
+       <number>100</number>
+      </property>
+      <property name="columnCount">
+       <number>5</number>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+     </widget>
+     <widget class="QPushButton" name="newQnA_Btn">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>700</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>QnA 등록하기</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>1060</x>
+        <y>700</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>뒤로가기</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>10</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:600;&quot;&gt;Q&amp;amp;A 게시판&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>0</y>
+        <width>1200</width>
+        <height>780</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>QnA.png</pixmap>
+      </property>
+     </widget>
+     <zorder>label_16</zorder>
+     <zorder>tableWidget</zorder>
+     <zorder>newQnA_Btn</zorder>
+     <zorder>pushButton_3</zorder>
+     <zorder>label_10</zorder>
+    </widget>
+    <widget class="QWidget" name="myInfo">
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>0</y>
+        <width>1200</width>
+        <height>780</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>chat.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>260</y>
+        <width>881</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="back_Btn1_2">
+      <property name="geometry">
+       <rect>
+        <x>1040</x>
+        <y>680</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color: rgb(0, 0, 0);
+border: 2px solid rgb(91, 155, 213);
+
+
+    background-color: rgb(255, 255, 255);
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+
+color: rgb(255, 255, 255);
+
+background-color: rgb(91, 155, 213);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>처음으로</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
